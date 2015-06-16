@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Math;
 
 
-public class DiceTeleOp  extends OpMode{
+public class DiceTeleOp extends OpMode{
 
     DcMotor leftMotor;
     DcMotor rightMotor;
@@ -30,9 +30,10 @@ public class DiceTeleOp  extends OpMode{
     public void stop() {
 
     }
+
+    double scaleInput (double initVal)
+    {
+        return (0.8 * Math.pow (initVal, 3)) + (.2 * initVal);
+    }
 }
 
-double scaleInput (double initVal)
-{
-    return (0.8 * Math.pow (initVal, 3)) + (.2 * initVal);
-}
